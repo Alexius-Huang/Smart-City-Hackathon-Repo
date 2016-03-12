@@ -1,5 +1,6 @@
 .img_container img {
     display:block;
     margin:auto;
-    max-width: 90%;
+    min-width: 100%;
+		
 }
