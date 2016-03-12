@@ -1,6 +1,6 @@
 <% Article.all.each do |article| %>
 	<div class="item">
-		<%= link_to (image_tag article.url, :style => "max-width: 95%; display: block; margin: 0 auto"), "#" %>
+		<%= link_to (image_tag article.url, :style => "max-width: 95%; display: block; margin: 0 auto"), "#", article: "#{article.id}" %>
 		<hr>
 		<p><%= article.tag %></p>
 		<h3><%= article.title %></h3>

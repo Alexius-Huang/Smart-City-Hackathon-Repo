@@ -25,8 +25,9 @@ $light: rgb(134,182,218);
 $light-light: rgba(134,182,218,0.5);
 $light-strong: rgba(134,182,218, 0.8);
 
-$dark-alpha-light: 			rgba(0,90,194, 0.5);
-$dark-alpha-strong:			rgba(0,90,194,0.8);
+$dark: rgb(7,55,91);
+$dark-light: 			rgba(7,55,91, 0.5);
+$dark-strong:			rgba(7,55,91,0.8);
 
 $pure: rgb(255,255,255);
 $pure-light: rgba(255,255,255,0.5);
@@ -69,32 +70,27 @@ body {
 
 	/* Navbar */
 
-	div.navbar-custom {
-		margin-bottom: 10px;
+	nav.navbar-custom {
+		margin: 0;
 		background-color: $primary-strong;
-		padding: 8px;
+		padding: 0;
 		color: $pure;
+		border: none;
 
-		a.navbar-home {
-			color: $pure-strong;
-			font-size: 150%;
-			margin: 3px;
-			padding: 3px;
+		a, .active {
+			color: $pure;
 		}
 
-		a.navbar-home:hover {
-			color: $pure;
-			text-decoration: none;
+		a:hover {
+			background-color: $dark;
 		}
 
 		ul {
-			margin: 5px;
-
 			li { 
-				margin: 0px 10px;
 				display: inline;
 				
 				a, button {
+					background-color: transparent;
 					color: $pure-light;
 					font-size: 110%;
 				}
@@ -103,11 +99,29 @@ body {
 					color: $pure;
 					text-decoration: none;
 				}
+
+				a:active {
+					background-color: $dark;
+				}
 			}
+			li a.dropdown:active {
+				background-color: $primary-strong;
+			}
+			.dropdown {
+				a, li {
+					color: $pure-strong;
+					background-color: $primary-strong;
+				}
+				a:hover, li:hover {
+					color: $pure;
+					background-color: $primary;
+				}
+			}
+
 		}
 	}
 
-	div.navbar-custom:hover {
+	nav.navbar-custom:hover {
 		background-color: $primary;
 	}
 

@@ -1,16 +1,38 @@
-<div class="navbar-custom navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a href="/" class="navbar-home"><span class="glyphicon glyphicon-stat"></span> 伍拾萬論壇</a>
-		</div>
-		
-		<div class="navbar-right">
-			<ul>
-				<li><%= html_icon("apple") %> <%= link_to " Some link", "#" %></li>
-				<li><%= html_icon("tag") %> <%= link_to " Some link", "#" %></li>
-				<li><%= html_icon("console") %> <%= link_to " Some link", "#" %></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div style="margin-top: 65px"></div>
+	<nav class="navbar navbar-custom navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+           <a class="navbar-brand" href="/"><%= html_icon("stat") %> 伍拾萬論壇</a>
+        </div>
+ 
+        <div id="navbar" class="navbar-collapse collapse">
+		      <form class="navbar-form navbar-left" role="search">
+		        <div class="form-group">
+		          <input type="text" class="form-control" placeholder="Search" >
+		        </div>
+		        <button type="submit" class="btn btn-default " style="background-color: rgba(134,182,218,0.5); color: white">Submit</button>
+		      </form>         
+          <ul class="nav navbar-nav navbar-right">
+						<% if user_signed_in? %>
+            <li class="active"><a href="#">Hello! <%= current_user.email %></a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: rgba(14,110,182,0.5);"> <%= html_icon("list") %></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><%= html_icon "home" %> 社團</a></li>
+                <li><a href="#"><%= image_tag "https://www.google.com.tw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=&url=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fuser-experience%2F512%2Ffriends-512.png&psig=AFQjCNEs8Os6KEC7Cnz-Z6zqEUrLhY-0Ww&ust=1457861333753839", :style => "max-width: 30px" %> 好友</a></li>
+                <li><a href="#"><%= html_icon "cog" %> 設定</a></li>
+                <li><a href="#"><%= html_icon "info-sign" %> 幫助</a></li>
+                <li><a href="#"><%= html_icon "log-out" %> 登出</a></li>
+              </ul>
+            </li>
+						<% else %>
+          	<li><%= link_to "登入", new_user_session_path, :class => "pull-right" %></li>
+          	<li><%= link_to "註冊", new_user_registration_path, :class => "pull-right" %></li>
+          	<% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+ 
+      </div>
+    </nav>
+    <div style="margin-top: 65px"></div>
+
