@@ -13,16 +13,16 @@
 		      </form>         
           <ul class="nav navbar-nav navbar-right">
 						<% if user_signed_in? %>
-            <li class="active"><a href="#">Hello! <%= current_user.email %></a></li>
+            <li class="active"><%= link_to "Hello! " + current_user.username, home_welcome_path %></a></li>
 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="background-color: rgba(14,110,182,0.5);"> <%= html_icon("list") %></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><%= html_icon "home" %> 社團</a></li>
-                <li><a href="#"><%= image_tag "https://www.google.com.tw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=&url=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fuser-experience%2F512%2Ffriends-512.png&psig=AFQjCNEs8Os6KEC7Cnz-Z6zqEUrLhY-0Ww&ust=1457861333753839", :style => "max-width: 30px" %> 好友</a></li>
-                <li><a href="#"><%= html_icon "cog" %> 設定</a></li>
+                <li><a href="#friend" data-toggle="modal" role="button"><%= image_tag "https://www.google.com.tw/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=&url=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fuser-experience%2F512%2Ffriends-512.png&psig=AFQjCNEs8Os6KEC7Cnz-Z6zqEUrLhY-0Ww&ust=1457861333753839", :style => "max-width: 30px" %> 好友</a></li>
+                <li><a href="#"><%= link_to html_icon("cog") + "設定", edit_user_registration_path %></a></li>
                 <li><a href="#"><%= html_icon "info-sign" %> 幫助</a></li>
-                <li><a href="#"><%= html_icon "log-out" %> 登出</a></li>
+                <li><%= link_to html_icon("log-out") + "登出", destroy_user_session_path, :method => :delete %></li>
               </ul>
             </li>
 						<% else %>
@@ -36,3 +36,16 @@
     </nav>
     <div style="margin-top: 65px"></div>
 
+
+
+<!-- Modal -->
+  <div class="modal fade" id="friend" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

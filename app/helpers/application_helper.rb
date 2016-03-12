@@ -6,4 +6,5 @@ module ApplicationHelper
   def html_icon(icon_type)
   	"<i class='glyphicon glyphicon-#{icon_type}'></i> ".html_safe
   end
+
 end
