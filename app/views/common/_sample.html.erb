@@ -1,0 +1,10 @@
+<% Article.all.each do |article| %>
+	<div class="item">
+		<%= (image_tag article.url, :style => "max-width: 95%; display: block; margin: 0 auto") %>
+		<hr>
+		<p><%= article.tag %></p>
+		<h3><%= article.title %></h3>
+		<h5><%= article.secondary_title %></h5>
+		<!-- <p><%= article.content %></p> -->
+	</div>
+<% end %>

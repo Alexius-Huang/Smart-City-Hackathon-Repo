@@ -1,0 +1,28 @@
+
+<div class="row" style="clear:both; max-width: 95%; display: block; margin: 0 auto">
+
+	<div class="col-md-2">
+		<div class="sidebar">
+			<div class="panel-heading panel-top-offset"><a href="#" id="ajax-btn-1">熱門議題排行</a></div>
+			<div class="panel-body" id="slide-1"><%= render 'article/title_list' %></div>
+			<div class="panel-heading unset-margin unset-radius"><a href="#" class="ajax-btn-2">個人資料</a></div>
+			<div class="panel-body" id="slide-2"><%= render 'common/user_info_list' %></div>
+			<div class="panel-heading unset-margin unset-radius"><a href="#" class="ajax-btn-3">公會</a></div>
+			<div class="panel-body" id="slide-3"><%= render 'common/user_participated_guilds' %></div>
+			<div class="panel-heading unset-margin unset-radius"><a href="" class="ajax-btn-4">好友</a></div>
+			<div class="panel-body" id="slide-4"><%= render 'common/user_friends' %></div>
+		</div>
+	</div>
+
+	<div class="col-md-10">
+		<div class="panel-heading panel-top-offset"><%= html_icon("paperclip") %> 伍拾萬社會議題版</div>
+		<div style="margin-top: 10px;"></div>
+		<div id="some-content">
+			<div id="wrapper">
+				<div id="list">
+					<%= render 'common/sample' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

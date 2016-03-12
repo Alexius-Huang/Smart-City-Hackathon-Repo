@@ -1,7 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+print "Seed file processing..."
+
+articles = [
+ 	[ "環境議題", "跟上COP21進度 環署明年1月起提五年減碳計畫", "本報2015年12月10日台北訊，陳文姿報導", "由環保署長魏國彥所帶領的政府部會代表團，於上週前往巴黎參加聯合國氣候綱要公约第21屆會員大會（COP21）。大會將於11日閉幕，魏國彥與政府代表特地隔海召開視訊記者會，說明巴黎氣候大會的最新進展。目前情勢看來，眾所注目的巴黎協議可望順利產生，也將牽動國內減碳與能源發展。", "https://c2.staticflickr.com/6/5659/23023227844_f0e6391f61_z.jpg"],
+  [ "醫療保健", "黃安按月繳費 不算濫用健保!?", "華視 – 2016年3月12日 下午12:00", "藝人黃安回台就醫開刀享用健保，初估至少耗費80萬健保資源，雖然黃安長年住在大陸，但每個月都有透過在台灣親友，定期繳交健保費，不過健保署統計發現、去年大約有5.7萬人，是在一年內短期返台復保，其中有四萬人回台就醫，花掉健保2.81億元。\n黃安回台送醫，戴著口罩、墨鏡，藝人黃安躺擔架上，9號凌晨搭醫療專機回台開刀，初估燒掉健保80萬，長年住在大陸但因為有定期繳健保，可享有健保資源，不過健保署統計發現，有5.7萬名海外僑胞，是出國後停保，要回台看醫生再趕緊復保享用健保資源，最多人回來看牙。\n國人返台復保，耗費最多健保費的就是看牙，再來是良性腫瘤，以及急性上呼吸道感染，不過二代健保實施後，想要停保復保規定更加嚴格，除籍就得等六個月復保的話要繳三個月健保費，去年一年內，復保又出國辦停保的，約有5.7萬人，健保收入3.1億，其中四萬人有再回台使用健保，支持2.8億，新制度讓健保不致於虧損，也保障了多數台灣人的健保資源。 ", "https://s1.yimg.com/bt/api/res/1.2/a0bmyybM7x510kff4S7qFw--/YXBwaWQ9eW5ld3NfbGVnbztmaT1pbnNldDtoPTM2MDtpbD1wbGFuZTtxPTc5O3c9NjQw/http://media.zenfs.com/zh_hant_tw/News/cts/L_201603121200004.jpg"],
+ 	[ "環境議題", "311五週年 馬英九：廢核不是世界趨勢，台核電廠是世界模範生", "作者政治中心／台北報導 | 民報 – 2016年3月11日 下午6:01", "日本311震災5周年，反核團體明天也將舉辦大遊行，行政院長張善政今天也為蘭嶼遷核廢跳票道歉，不過，總統馬英九今（11）日仍舉日本、歐洲的例子，稱核電仍在增加中，廢核「並不是」世界趨勢，日本首相安倍也說「我們不能沒有核電」。\n馬英九提到，「將運作很好核電廠除役要想一想」，台灣現有3座核電廠，6個機組，根據聯合國原子能總署的全世界核電廠評比，台灣在31個國家，66個機組排名第5，核電廠照計畫運轉比例做到90.1%。", "https://s.yimg.com/bt/api/res/1.2/RMhtwSKboV_wLh4ZOulzSg--/YXBwaWQ9eW5ld3NfbGVnbztmaT1pbnNldDtoPTMyNTtpbD1wbGFuZTtxPTc5O3c9NDAw/http://media.zenfs.com/zh-Hant-TW/News/peoplenews.tw/06558201-0906-48cb-8a37-4159098e3402.jpg"],
+ 	[ "資訊科技", 
+ 		"開放資料(Open Data)","運用開放資料與大數據 啟動高值化新創事業","環顧全球各國，若針對政府開放資料指標之評比，台灣已被英國開放資料基金會評定為第一名，此乃不爭的事實。\n細究台灣之所以擊退地主國英國而奪得冠軍，最主要的關鍵，乃是能夠在Global Open Data Index評比的13項指標中，拿下了多達9個第一，分別是「國家統計」、「地理圖資」、「立法規範」、「公司登記」、「政府預算」、「汙染物排放」、「採購招標」、「選舉結果」與「水質」；至於其他4項指標，台灣則在「天氣」名列第7，在「政府支出」排名第8，在「郵遞區號」排名49，在「土地所有權」名列第53位。\n而形成前述各項評比的分數，則取決於9項開放程度權重公式；換言之，舉凡資料的存在與否、資料可否被公開取得、資料是否上網、資料格式是否支援機器讀取，乃至於資料是否有公開授權等等重要項目，都是台灣政府賴以爭取高分的關鍵。\n聽聞此訊息，相信不少民眾與業者備感驚訝，因為他們過去不見得關注政府究竟開放了哪些資料，也錯失了善用開放資料、創造加值效益的良機。然而正所謂亡羊補牢、為時未晚，此刻仍是端詳與釐清政府資料開放內容的好時機。", 
+ 		"http://mms.digitimes.com/NewsImg/2016/0222/461124-1-KJ7JY.jpg"],
+	[ "居住正義", "杜絕非法房仲！北市「Open Data」讓你查", "好房網News記者蔡佩蓉／台北報導", "惡質房仲敗壞市場風氣，也引發不少買賣糾紛，日前有台北市議員舉辦記者會，指出北市有「無照房仲公司」，甚至不斷捲土重來、重新營業，讓不少民眾受害，台北市地政局也公布傅姓業者的公司名稱，目前已經共裁罰120萬元，地政局也呼籲民眾，可至官網查詢「違反不動產經紀業管理條例業者名單」，確保封鎖惡質房仲。", "http://p1-news.hfcdn.com/p1-news/MTA5NTExM25ld3M,/f89565d306786143.jpg" ]
+ ]
+
+
+should_generate_three_articles = articles.each do |tag, title, secondary_title, content, url|
+	Article.create(tag: tag, title: title, secondary_title: secondary_title, content: content, url: url)
+end
+
+puts "Complete!"
+puts "Enjoy testing!"
