@@ -8,9 +8,14 @@
         $(document).on('click', '.statistic', function() {
              var dialogInstanceC = new BootstrapDialog({
                 title: '統計資訊',
-                message: '<div class="static_contaier" style="min-height: 600px;"><svg  width="600px" style="width: 100%; min-height: 600px;"></svg></div>',
+                message: '<div> <div class="dropdown">     <span style="font-size:large;">分析選項：</span>    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">贊成族群   <span class="caret"></span></button>    <ul class="dropdown-menu">        <li><a href="#">贊成族群</a></li>       <li><a href="#">反對族群</a></li>     </ul> </div></div>'
+                        '<div class="static_contaier" style="min-height: 600px;">' + 
+                        '<svg  width="600px" style="width: 100%; min-height: 600px;"></svg></div>' + 
+                        '<div class="static_contaier" style="min-height: 600px;">' + 
+                        '<svg  width="600px" style="width: 100%; min-height: 600px;"></svg></div>' +
+                        '<div><img id="taiwan" src="taiwan.jpg" style="display:block;  margin:auto; max-width: 90%;"></div>',
                 onshown: function(dialogRef){
-                    drawPieChart('.static_contaier svg');
+                    drawAllCart()
                 }
             });
             dialogInstanceC.open();
