@@ -16,13 +16,14 @@
                                 '<span class="glyphicon glyphicon-tower" style="margin-right:3px;"></span> <span style="margin-right:10px; ">王八卦</span>' +
                                 '</div>' + 
                                 '<div class="pull-right">' + 
-                                '<span class="glyphicon glyphicon-thumbs-up" style="margin-right:3px;"></span><span style="margin-right:10px; ">100</span>' + 
-                                '<span class="glyphicon glyphicon-thumbs-down" style="margin-right:3px;"></span><span style="margin-right:10px; ">20</span>' + 
+                                '<%= image_tag "likes.jpg", style: "width: 20px" %><span style="margin-right:10px; ">100</span>' + 
+                                '<%= image_tag "dislikes.jpg", style: "width: 20px" %><span style="margin-right:10px; ">20</span>' + 
                                 '<span class="glyphicon glyphicon-signal" style="margin-right:3px;"></span><span style="margin-right:10px;"><a class="statistic" style="cursor: pointer;">統計資訊</a></span>' + 
                                 '<%= image_tag "laba01.png", style: "width: 20px" %><a class="money" style="cursor: pointer;">募資平台</a></span>' + 
                                 '</div>' + 
                             '</div>' +
                             '<div class="pull-left" style="margin-top: 10px; padding-left: 15px; padding-right: 15px">' + msg[3]  + '</div>' +
+                            '<div><%= image_tag "response.png", style: "width: 100%" %></div>' +
                         '</div>'
 
         var dialogInstance = new BootstrapDialog({
