@@ -23,7 +23,7 @@
 	<div class="col-md-9">
 		<div class="row">
 			<div class="col-md-12">
-				<div style="margin-top: 10px;"></div>
+				<div style="margin-top: 7px;"></div>
 				<pre style="float: left;"><h4>姓名 | <%= current_user.username %></h4></pre>
 				<%= image_tag "兒童教育議題.png", :style => "max-width: 40px; margin-left: 20px" %>
 				<!-- 
@@ -52,13 +52,16 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<%= image_tag "https://scontent-tpe1-1.xx.fbcdn.net/hphotos-xap1/t31.0-8/1933371_1286144784734323_8507430643831508329_o.jpg", :style => "max-height: 100px;" %>
+				<% (1..6).each do |n| %>
+					<%= image_tag "ICON2-0#{n}.png", :style => "max-width: 80px; float: left" %>
+				<% end %>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<div class="panel-body" style="background-color: rgba(134,182,218,0.5); border: 0px; border-radius: 3px; padding: 5px">HERE IS THE INTRODUCTION</div>
+				<div class="panel-body" style="background-color: rgba(134,182,218,0.5); border: 0px; border-radius: 3px; padding: 4px; "><p style="height: 200%; padding: 10px">HERE IS THE INTRODUCTION <br><br> <%= link_to "Read More...", "#", :class => "pull-right" %></p>
+				</div>
 			</div>
 		</div>
 
