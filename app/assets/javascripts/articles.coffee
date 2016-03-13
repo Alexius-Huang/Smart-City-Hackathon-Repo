@@ -14,3 +14,4 @@ $(document).on "page:change", ->
 	$("#ajax-btn-4").click (event) ->
 		event.preventDefault()
 		$("#slide-4").slideToggle("slow")
+
