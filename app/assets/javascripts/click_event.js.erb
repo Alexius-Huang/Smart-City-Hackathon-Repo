@@ -13,7 +13,7 @@
                         '<svg  width="600px" style="width: 100%; min-height: 600px;"></svg></div>' + 
                         '<div class="static_contaier" style="min-height: 600px;">' + 
                         '<svg  width="600px" style="width: 100%; min-height: 600px;"></svg></div>' +
-                        '<div><img id="taiwan" src="taiwan.jpg" style="display:block;  margin:auto; max-width: 90%;"></div>',
+                        '<div><%= image_tag "taiwan.png", :style => "display:block; margin:auto;  max-width: 90%;" %></div>',
                 onshown: function(dialogRef){
                     drawAllCart()
                 }
